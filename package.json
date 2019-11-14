@@ -1,0 +1,18 @@
+{
+  "name": "ppdl-demo",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:test3207/ppdl-demo.git"
+  },
+  "author": "test3207<test3207@outlook.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ali-oss": "^6.1.1",
+    "md5": "^2.2.1",
+    "puppeteer": "^2.0.0",
+    "superagent": "^5.1.0"
+  }
+}
