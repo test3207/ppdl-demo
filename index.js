@@ -1,22 +1,18 @@
 const ppdlCore = require('./lib/ppdl-core')
+const args = process.argv
+const provinces = ['jx', 'zj', 'gd', 'xj']
+let province = 'jx'
+for (let i = 0 ; i < args.length ; i++) {
+  if (args[i] === '-p') {
+    args[i+1] && (province = args[i+1])
+  } 
+}
 
-// ppdlCore.jx({
-//   serialNo: '36070116236974**',
-//   type: 'tesseract'
-// })
+if (!provinces.includes(province)) throw new Error('You Have But These Provinces To Choose: jx, zj, gd, xj')
 
-// ppdlCore.gd({
-//   serialNo: '4401071450508**',
-//   type: 'fateadm'
-// })
-
-// ppdlCore.zj({
-//   serialNo: '001201911130161**',
-//   code: 'f764f'
-// })
-
-ppdlCore.xj({
-  serialNo: '647067640',
-  payeeName: '赵俊'
+ppdlCore[province]({
+  serialNo: '123',
+  type: 'fateadm', // 识别器，有验证码的省份需要填
+  payeeName: '张三', // 付款人，新j需要填
+  checkCode: '7777' // 校验码，浙江需要填
 })
-// http://finpt.xjcz.gov.cn/finpt/billCheck/print.do?billNo=647067640&payeeName=%E8%B5%B5%E4%BF%8A
