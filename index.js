@@ -16,8 +16,8 @@ if (!provinces.includes(province)) throw new Error('You Have But These Provinces
 if (!fs.existsSync(path.join(process.cwd(), './temp'))) fs.mkdirSync(path.join(process.cwd(), './temp'))
 
 ppdlCore[province]({
-  serialNo: '647067640',
+  serialNo: '123',
   type: 'fateadm', // 识别器，有验证码的省份需要填
-  payeeName: '赵俊', // 付款人，新j需要填
+  payeeName: '哈哈哈', // 付款人，新j需要填
   checkCode: '7777' // 校验码，浙江需要填
 })
